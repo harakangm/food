@@ -174,5 +174,22 @@ public class FoodDAO {
 		ps.setInt(1, num);
 		
 		ps.executeUpdate();
+		
+		conn.close();
+		ps.close();
+	}
+	
+	public void modify(int num) {
+		Rstrn rt = new Rstrn();
+		Connection conn = open();
+		String sql = "update rstrn set order_addr = ? where order_number = ? ";
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, num);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }

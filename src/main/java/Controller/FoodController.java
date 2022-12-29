@@ -72,6 +72,8 @@ public class FoodController extends HttpServlet {
 		case "/delete" :
 			delete(request,response);
 			break;
+		case "/Modify" :
+			break;
 		}
 		
 		if(site.startsWith("redirect:/")) { //redirect
@@ -197,7 +199,11 @@ public class FoodController extends HttpServlet {
 		
 	}
 	
-	
+	public String Modify(HttpServletRequest request) {
+		int num = Integer.parseInt(request.getParameter("order_number"));
+		String addr = request.getParameter("");
+		
+	}
 	
 }
 

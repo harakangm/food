@@ -29,7 +29,7 @@
 			</tr>
 		</table>
 	</form>
-	<a href="#">주소수정하기</a>
+	<a href="./Modify?order_number=${rt.order_number}">주소수정하기</a>
 	<a href="./delete?order_number=${rt.order_number}">취소하기</a>
 </body>
 </html>
